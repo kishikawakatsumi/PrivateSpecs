@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
 
   s.source_files          = "Headers/*.h"
   s.public_header_files   = "Headers/*.h"
-  # s.vendored_library      = "Libraries/libTwilioClient.a", "Libraries/libcrypto.a", "Libraries/libssl.a"
+  s.vendored_library      = "Libraries/libTwilioClient.a", "Libraries/libcrypto.a", "Libraries/libssl.a"
   s.resources             = "Resources/*.wav"
   s.frameworks            = "AudioToolbox", "AVFoundation", "CFNetwork", "SystemConfiguration"
   s.requires_arc          = true
-  s.module_map            = 'https://github.com/kishikawakatsumi/PrivateSpecs/blob/master/TwilioClient/TwilioClient.modulemap'
+  s.module_map            = 'TwilioClient/TwilioClient.modulemap'
 end
