@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.resources             = "Resources/*.wav"
   s.frameworks            = "AudioToolbox", "AVFoundation", "CFNetwork", "SystemConfiguration"
   s.requires_arc          = true
-  s.module_map            = 'TwilioClient/TwilioClient.modulemap'
+  s.module_map            = 'https://github.com/kishikawakatsumi/PrivateSpecs/blob/master/TwilioClient/TwilioClient.modulemap'
 end
