@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     :text => "Copyright 2011-2016 Twilio. All rights reserved. Use of this software is subject to the terms and conditions of the Twilio Terms of Service located at http://www.twilio.com/legal/tos"
   }
   s.author       = { "Twilio" => "help@twilio.com" }
-  s.source       = { :http    => "https://github.com/kishikawakatsumi/PrivateSpecs/raw/master/TwilioClient/1.2.7/TwilioClient-1.2.7.zip" }
+  s.source       = { :http    => "https://github.com/kishikawakatsumi/PrivateSpecs/raw/master/TwilioClient/1.2.7/archive.zip" }
 
   s.source_files          = "Headers/*.h"
   s.public_header_files   = "Headers/*.h"
@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.resources             = "Resources/*.wav"
   s.frameworks            = "AudioToolbox", "AVFoundation", "CFNetwork", "SystemConfiguration"
   s.requires_arc          = true
-  # s.module_map            = 'TwilioClient/TwilioClient.modulemap'
+  s.module_map            = 'TwilioClient/TwilioClient.modulemap'
 end
