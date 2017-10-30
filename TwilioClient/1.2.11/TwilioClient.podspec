@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "Twilio Client SDK"
   s.description  = "Twilio Client has the features that make it easy to embed VoIP directly into your iOS apps."
   s.homepage     = "http://www.twilio.com/client"
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "8.1"
   s.license      = {
     :type => "Commercial",
     :text => "Copyright 2011-2016 Twilio. All rights reserved. Use of this software is subject to the terms and conditions of the Twilio Terms of Service located at http://www.twilio.com/legal/tos"
