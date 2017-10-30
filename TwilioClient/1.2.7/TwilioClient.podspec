@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.author       = { "Twilio" => "help@twilio.com" }
   s.source       = { :http    => "https://github.com/kishikawakatsumi/PrivateSpecs/raw/master/TwilioClient/1.2.7/archive.tgz" }
 
-  s.source_files          = "Headers/*.h"
+  s.source_files          = "Headers/*.{h,m}"
   s.public_header_files   = "Headers/*.h"
   s.vendored_library      = "Libraries/libTwilioClient.a", "Libraries/libcrypto.a", "Libraries/libssl.a"
   s.resources             = "Resources/*.wav"
