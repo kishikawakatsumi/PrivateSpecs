@@ -10,13 +10,13 @@ Pod::Spec.new do |s|
     :text => "Copyright 2011-2016 Twilio. All rights reserved. Use of this software is subject to the terms and conditions of the Twilio Terms of Service located at http://www.twilio.com/legal/tos"
   }
   s.author       = { "Twilio" => "help@twilio.com" }
-  s.source       = { :http    => "https://media.twiliocdn.com/sdk/ios/client/releases/1.2.11/twilio-client-ios-1.2.11.tar.bz2" }
+  s.source       = { :http    => "https://github.com/kishikawakatsumi/PrivateSpecs/raw/master/TwilioClient/1.2.11/archive.tgz" }
 
-  s.source_files          = "Headers/*.h"
+  s.source_files          = "Headers/*.{h,m}"
   s.public_header_files   = "Headers/*.h"
   s.vendored_library      = "Libraries/libTwilioClient.a", "Libraries/libcrypto.a", "Libraries/libssl.a"
   s.resources             = "Resources/*.wav"
   s.frameworks            = "AudioToolbox", "AVFoundation", "CFNetwork", "SystemConfiguration"
   s.requires_arc          = true
-  s.module_map            = 'https://github.com/kishikawakatsumi/PrivateSpecs/blob/master/TwilioClient/TwilioClient.modulemap'
+  s.module_map            = 'TwilioClient/TwilioClient.modulemap'
 end
