@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.frameworks            = "AudioToolbox", "AVFoundation", "CFNetwork", "SystemConfiguration"
   s.requires_arc          = true
   s.module_map            = 'TwilioClient/TwilioClient.modulemap'
-  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/TwilioClient/Libraries"' }
+  s.pod_target_xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/TwilioClient/Libraries"' }
 end
