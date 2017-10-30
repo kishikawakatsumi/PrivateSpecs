@@ -1,5 +1,9 @@
 framework module TwilioClient {
     umbrella header "TwilioClient.h"
+    
+    link "ssl"
+    link "crypto"
+    link "TwilioClient"
 
     export *
     module * { export * }
