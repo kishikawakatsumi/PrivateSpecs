@@ -30,6 +30,5 @@ Pod::Spec.new do |s|
                               echo '  export *' >> TwilioClient/TwilioClient.modulemap
                               echo '  module * { export * }' >> TwilioClient/TwilioClient.modulemap
                               echo '}' >> TwilioClient/TwilioClient.modulemap
-                              ls -a
                             CMD
 end
