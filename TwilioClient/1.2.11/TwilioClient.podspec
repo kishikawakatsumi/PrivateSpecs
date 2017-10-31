@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     :text => "Copyright 2011-2016 Twilio. All rights reserved. Use of this software is subject to the terms and conditions of the Twilio Terms of Service located at http://www.twilio.com/legal/tos"
   }
   s.author       = { "Twilio" => "help@twilio.com" }
-  s.source       = { :http    => "https://github.com/kishikawakatsumi/PrivateSpecs/raw/master/TwilioClient/1.2.11/archive.tgz" }
+  s.source       = { :http    => "https://media.twiliocdn.com/sdk/ios/client/releases/1.2.11/twilio-client-ios-1.2.11.tar.bz2" }
 
   s.source_files          = "Headers/*.{h,m}"
   s.public_header_files   = "Headers/*.h"
@@ -19,4 +19,17 @@ Pod::Spec.new do |s|
   s.frameworks            = "AudioToolbox", "AVFoundation", "CFNetwork", "SystemConfiguration"
   s.requires_arc          = true
   s.module_map            = 'TwilioClient/TwilioClient.modulemap'
+  s.prepare_command       = <<-CMD
+                              echo 'static int __dummy = 0;' > Headers/Dummy.m
+                              mkdir TwilioClient
+                              echo 'framework module TwilioClient {' > TwilioClient/TwilioClient.modulemap
+                              echo '  umbrella header "TwilioClient.h"' >> TwilioClient/TwilioClient.modulemap
+                              echo '  link "ssl"' >> TwilioClient/TwilioClient.modulemap
+                              echo '  link "crypto"' >> TwilioClient/TwilioClient.modulemap
+                              echo '  link "TwilioClient"' >> TwilioClient/TwilioClient.modulemap
+                              echo '  export *' >> TwilioClient/TwilioClient.modulemap
+                              echo '  module * { export * }' >> TwilioClient/TwilioClient.modulemap
+                              echo '}' >> TwilioClient/TwilioClient.modulemap
+                              ls -a
+                            CMD
 end
