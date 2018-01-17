@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
   s.dependency 'ISO8601DateFormatter'
 
   s.source = { :http => 'https://github.com/kishikawakatsumi/CoreBitcoin/raw/spec/CoreBitcoin.zip' }
-  s.source_files        = 'CoreBitcoin.framework/Headers/*.h'
-  s.public_header_files = 'CoreBitcoin.framework/Headers/*.h'
+  s.source_files        = 'CoreBitcoin.framework/Headers/**/*.h'
+  s.public_header_files = 'CoreBitcoin.framework/Headers/**/*.h'
+  s.preserve_paths = 'CoreBitcoin.framework/Headers/*'
   s.vendored_frameworks = 'CoreBitcoin.framework'
 end
